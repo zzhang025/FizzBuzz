@@ -8,7 +8,15 @@
 body{
     color:var(--dark-color);
 }
-
+.text-red{
+    color: rgb(190, 40, 40);
+}
+.text-green{
+    color: rgb(48, 211, 48);
+}
+.text-blue{
+    color: var(--secondary-color);
+}
 nav{
     background-color:var(--dark-color);
 }

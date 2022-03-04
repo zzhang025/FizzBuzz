@@ -12,42 +12,46 @@ function getValues(){
     fizz = parseInt(fizz);
     buzz = parseInt(buzz);
 
-    //Validate Inputs
-    if (Number.isInteger(fizz) && Number.isInteger(buzz)) {
-        let numbers= buzzNumbers(fizz,buzz)
-    } else {
-        alert("Inputs must be integers")
-    }
-
     // Generate Fizzbuzz
-    let numbers = buzzNumbers(fizz,buzz);
+    let numbers = generateNumbers();
 
     // Display the Numbers
     displayNumbers(numbers);
 }
 
 // Generate numbers
-function buzzNumbers(fizz,buzz){
+function generateNumbers(){
     let numbers = Array.from(Array(100).keys());
+    
     return numbers;
 }
 
 // Display and Replace
 function displayNumbers(numbers){
+// Obtain values from the page
+    let fizz = document.getElementById("startValue").value;
+    let buzz = document.getElementById("endValue").value;
+
     let templateRows ="";
-    let className="even";
-    for (let index = 0; index < numbers.length; index++) {
-        let number = numbers[index];
-        if(number % 2 == 0){
-            className="even";
-        } else{
-            className="odd";
+    for (let index = 1; index < numbers.length; index++) {
+        if(index % fizz ==0 && index % buzz==0){
+            color = "text-red";
+            number = "fizzbuzz";
+        } else if(index % fizz ==0 ){
+            color = "text-green";
+            number = "fizz";
+        } else if(index % buzz ==0 ) {
+            color = "text-blue";
+            number ="buzz";
+        } else {
+            color = ""
+            number = index;
         }
-
-        templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+        
+        templateRows += `<tr><td class="${color}">${number}</td></tr>`;
     }
-
-    document.getElementById("results").innerHTML = templateRows
+    
+    document.getElementById("results").innerHTML = templateRows;
 
 
 }
