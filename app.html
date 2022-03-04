@@ -47,8 +47,42 @@
     </nav>
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
-    <div class="container">
+    <div class="container mt-5">
+        <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col-lg-5 border-end border-2">
+                <h2>FizzBuzz: A Coding Project</h2>
+                <h4 class="lead">Live life one loop at a time. A javascript coding excersize using loops. This program will displays the numbers from 0 to 100 and each multiple of 3 display "Fizz", multiple of 5 display "Buzz", and for multiples of both
+                    3 and 5 numbers will be <strong>FizzBuzz</strong>.
+                </h4>
+                <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+                <p>Enter a starting value. Press the button and the values will appear.</p>
+            </div>
+            <div class="col-lg-7">
+                <h5>Enter Values</h5>
+                <form class="row gx-2">
+                    <div class="col">
+                        <input id="startValue" type="number" class="form-control" placeholder="Start Value" 
+                        value=0 aria-label="Start Value">
+                    </div>
+                    <div class="col">
+                        <input id="endValue" type="number" class="form-control" placeholder="End Value" 
+                        value=100 aria-label="End Value">
+                    </div>
+                    <div class="col-12 d-flex justify-content-end mt-2">
+                        <button id="btnSubmit" type="button" class="btn btn-primary btn-md">FizzBuzz!</button>
+                    </div>
+                 </form>
 
+                <h3 class="mt-4 border-bottom border-2">Results</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped table-sm">
+                        <tbody id="results">
+                            <!--Results Display-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
     </main>
      <!-- ==== Footer Section ==== -->
