@@ -8,13 +8,14 @@
 body{
     color:var(--dark-color);
 }
-.text-red{
+.FizzBuzz{
     color: rgb(190, 40, 40);
+    font-weight:bold;
 }
-.text-green{
+.Fizz{
     color: rgb(48, 211, 48);
 }
-.text-blue{
+.Buzz{
     color: var(--secondary-color);
 }
 nav{
