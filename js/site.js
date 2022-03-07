@@ -14,7 +14,7 @@ function getValues(){
     // check the numbers if they are integer 
     if (Number.isInteger(fizz) && Number.isInteger(buzz)) {
         // call fizzbuzz//
-        let fbArray = fizzbuzzB(fizz,buzz);
+        let fbArray = fizzbuzzC(fizz,buzz);
         displayData(fbArray);
     } else {
         alert("You must Enter Integers")
@@ -74,6 +74,19 @@ function fizzbuzzB(fizz,buzz){
         }
     }
     return returnArray;
+}
+
+function fizzbuzzC(fizz,buzz){
+    let returnArray=[];
+    
+    for (let i = 1; i <= 100; i++) {
+        
+        let value = ((i%fizz==0 ? "Fizz": "") + (i%buzz==0 ? "Buzz": "") || i);
+        returnArray.push(value);
+    }
+
+    return returnArray;
+
 }
 
 // Display Data
